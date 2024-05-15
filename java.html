@@ -1,0 +1,147 @@
+<html>
+    <head>
+    <script>
+        var q= [" java =?","java use for","raju is..?","dheeraj is ..?","cow has_legs?","2-1 = ?","2*4=?","love is=?","cc full form","my age is" ];
+        var op1 = ["c++","design","gay","singer","3 lags","3","8","dumb","chandi chowk","655"];
+
+        var op2 = ["salman khan","logic","boy","business man","5 lags","4","6","shit","chaman chowk","27"];
+
+        var op3 = ["script","to conect sever","girl","dancer","1 lag","1","-11","ok","civik center","8000"];
+
+        var op4 = ["dheeraj sir","time pass","gawar","fighter","4 lags","3","1","blind","casecading","24"];
+        var count=0;
+        var ans = [3,2,2,3,4,3,1,4,3,4];
+        var index;
+        function show(v)
+        {
+            index=v;
+            document.getElementById("x").innerHTML="Question = "+q[v]+ "<br><input type= radio class=t name=x id=a1 value=1>"+op1[v]+"<input type =radio class=t name=x id=b2 value = 2>"+op2[v]+"<input type =radio class=t name=x id=c3 value = 3>"+op3[v]+"<input type =radio class=t name=x id=d4 value =4>"+op4[v]+"<br><input type= button class=v value=next onclick=next()><input type= button class=v value=privious onclick=privious()><input type= button class=v value=answer onclick=answer()><input type=button class=v  value=finish  onclick=finish()>";
+
+        }
+        function next()
+        {
+            index++;
+            document.getElementById("x").innerHTML="Question  = "+q[index]+ "<br><input type= radio class=t name=x id=a1 value=1>"+op1[index]+"<input type =radio class=t name=x id=b2 value = 2>"+op2[index]+"<input type =radio class=t name=x id=c3 value = 3>"+op3[index]+"<input type =radio class=t name=x id=d4 value =4>"+op4[index]+"<br><input type= button class=v value=next onclick=next()><input type= button class=v value=privious onclick=privious()><input type= button class=v value=answer onclick=answer()><input type=button class=v  value=finish  onclick=finish()> ";
+
+        }
+        function privious()
+        {
+            index--;
+            document.getElementById("x").innerHTML="Question  = "+q[index]+ "<br><input type= radio class=t name=x id=a1 value=1>"+op1[index]+"<input type =radio class=t name=x id=b2 value = 2>"+op2[index]+"<input type =radio class=t name=x id=c3 value = 3>"+op3[index]+"<input type =radio class=t name=x id=d4 value =4>"+op4[index]+"<br><input type= button class=v value=next onclick=next()><input type= button class=v value=privious onclick=privious()><input type= button class=v value=answer onclick=answer()><input type=button class=v  value=finish onclick=finish()>";
+        }
+        function answer()
+        {
+            var p=0;
+
+            document.getElementById(index).style.background="cyan"
+
+            if(document.getElementById("a1").checked==true)
+            {
+                p=1;
+            }
+            if(document.getElementById("b2").checked==true)
+            {
+                p=2;
+            }
+            if(document.getElementById("c3").checked==true) 
+            {
+                p=3;
+            }
+            if(document.getElementById("d4").checked==true)
+            {
+                p=4;
+            }
+
+            if(p==ans[index])
+            {
+                count++;
+            }
+            alert("answer submitted");
+        
+        }
+        function finish()
+        {
+            alert(count+"/10")
+        }
+        var zx=45;
+           var ti=setInterval (function()
+           {
+             document.getElementById("ti").innerHTML="time left = "+zx;
+             zx--;
+             if(zx==-1)
+             {
+                clearInterval (ti);
+                document.getElementById("qu").style.visibility="hidden";
+             }
+              
+           },1000);
+         
+        </script>
+        <style>
+           body
+            {
+                background-image: url(m.jpg);
+                background-size: 1600px 744px;
+            }
+            .q
+            {
+                height: 80px;
+                width: 80px;
+                margin-left: 62px;
+                background-color: rgb(0, 255, 106);
+                margin-top: 50px;
+                
+            }
+            h1
+            { text-align: center;
+            margin-top: 50px;
+            color:rgb(0, 191, 255);
+            text-decoration: underline;
+            }
+            .t
+            {
+                height: 20px;
+                width: 20px;
+                margin-top: 40px;
+                margin-left: 100px;
+
+            }
+            .v
+            {   
+                background-color: brown;
+                height: 40px;
+                width: 100px;
+                margin-top: 30px;
+                margin-left: 150px;
+                font-size: 20px;
+                color: white;
+            }
+            p
+            {
+             font-size: 30px;
+             text-align: center;
+            }
+        </style>
+        <h1>JAVA SCRIPT EXAMINATION PAPER (2023)</h1>
+    </head>
+    <body>
+        <div id="qu">
+        <input type="button" id="0" value="1" onclick="show(0)"class="q">
+        <input type="button" id="1" value="2" onclick="show(1)"class="q"> 
+        <input type="button" id="2" value="3" onclick="show(2)"class="q">
+        <input type="button" id="3" value="4" onclick="show(3)"class="q">     
+        <input type="button" id="4" value="5" onclick="show(4)"class="q">
+        <input type="button" id="5" value="6" onclick="show(5)"class="q"> 
+        <input type="button" id="6" value="7" onclick="show(6)"class="q">
+        <input type="button" id="7" value="8" onclick="show(7)"class="q">
+        <input type="button" id="8" value="9" onclick="show(8)"class="q">
+        <input type="button" id="9" value="10"onclick="show(9)"class="q">
+        <br>
+        <p id="x"> </p>
+        <p id="ti"></p>
+    </div>
+        
+        
+
+    </body>
+</html>

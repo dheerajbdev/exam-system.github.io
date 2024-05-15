@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <script>
+          function add()
+          {
+            var a =document.getElementById("a1").value;
+            var b =document.getElementById("b1").value;
+            var c,d,e;
+
+            if(document.getElementById("i").checked==true)
+            {
+                c=parseInt(a)+parseInt(b);
+                document.write("add = "+c);
+            }
+            if(document.getElementById("j").checked==true)
+            {
+                d=parseInt(a)*parseInt(b);
+                document.write("multiply = "+d);
+            }
+            if(document.getElementById("k").checked==true)  
+            {
+                e= parseInt(a)-parseInt(b);
+                document.write("minus = "+e);
+            }
+
+
+
+          }
+    </script>
+    </head>
+    <body>
+        <input type="text" id="a1"> 
+        <input type="text" id="b1"> 
+        <br>
+        <input type="checkbox" value="x" id="i">Add 
+        <input type="checkbox" value="y" id="j">multiply
+        <input type="checkbox" value="z" id="k">minus
+<br>
+        <input type="button" value="ok" onclick="add()">
+
+
+    </body>
+</html>

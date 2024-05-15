@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            function show()
+            {
+                if(document.getElementById("a").checked==true)
+                {
+                    alert(document.getElementById("a").value);
+                }
+               if(document.getElementById("b").checked==true)
+                {
+                    alert(document.getElementById("b").value);
+                }
+                 if(document.getElementById("c").checked==true)
+                {
+                    alert(document.getElementById("c").value);
+                }
+            }
+          
+        </script>
+    </head>
+    <body>
+        <input type="checkbox" value="c" id="a">c
+        <br>
+        <input type="checkbox" value="c++" id="b">c++
+        <br>
+        <input type="checkbox" value="java" id="c">java
+        <br>
+        <input type="button" onclick="show()" value="ok">
+    </body>
+</html>

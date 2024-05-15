@@ -1,0 +1,35 @@
+<html>
+    <head> 
+    <script>
+        function pizz()
+        {
+        var a=document.getElementById("x").value;
+        var b=document.getElementById("y").value;
+        var r;
+        r=a*b;
+        if(document.getElementById("c").checked==true)
+        {
+            r=r+r*6/100;
+        }
+        document.write( "total amount = "+r);
+    }
+
+    </script>
+    </head>
+    <body>
+       product <select id="x">
+        <option value="100">Pizza</option>
+        <option value="70">Pasta</option>
+       </select>
+       cost <select id="y">
+        <option >1</option>
+        <option >2</option>
+        <option >3</option>
+        <option >4</option>
+        <option >5</option>
+       
+       </select>
+       <input type="checkbox" value="t" id="c">GST;
+       <input type="button" value="ok" onclick="pizz()">
+    </body>
+</html>

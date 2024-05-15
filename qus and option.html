@@ -1,0 +1,80 @@
+<html>
+    <head>
+    <script>
+        var q= [" who is pm of india","2+4=?","raju is..?","dheeraj is ..?","cow has_legs?","2-1 = ?","2*4=?","love is=?","cc full form","my age is" ];
+        var op1 = ["narendra modi","6","gay","singer","3 lags","3","8","dumb","chandi chowk","655"];
+
+        var op2 = ["salman khan","5","boy","business man","5 lags","4","6","shit","chaman chowk","27"];
+
+        var op3 = ["pappu","4","girl","dancer","1 lag","1","-11","ok","civik center","8000"];
+
+        var op4 = ["dheeraj sir","1","gawar","fighter","4 lags","3","1","blind","casecading","24"];
+
+        var ans = [1,1,2,3,4,3,1,4,3,4];
+        var index;
+        function show(v)
+        {
+            index=v;
+            document.getElementById("x").innerHTML="qus = "+q[v]+ "<br><input type= radio name=x id=a1 value=1>"+op1[v]+"<input type =radio name=x id=b2 value = 2>"+op2[v]+"<input type =radio name=x id=c3 value = 3>"+op3[v]+"<input type =radio name=x id=d4 value =4>"+op4[v]+"<br><input type= button value=next onclick=next()><input type= button value=privious onclick=privious()><input type= button value=answer onclick=answer()>";
+
+        }
+        function next()
+        {
+            index++;
+            document.getElementById("x").innerHTML="qus = "+q[index]+ "<br><input type= radio name=x id=a1 value=1>"+op1[index]+"<input type =radio name=x id=b2 value = 2>"+op2[index]+"<input type =radio name=x id=c3 value = 3>"+op3[index]+"<input type =radio name=x id=d4 value =4>"+op4[index]+"<br><input type= button value=next onclick=next()><input type= button value=privious onclick=privious()><input type= button value=answer onclick=answer()> ";
+
+        }
+        function privious()
+        {
+            index--;
+            document.getElementById("x").innerHTML="qus = "+q[index]+ "<br><input type= radio name=x id=a1 value=1>"+op1[index]+"<input type =radio name=x id=b2 value = 2>"+op2[index]+"<input type =radio name=x id=c3 value = 3>"+op3[index]+"<input type =radio name=x id=d4 value =4>"+op4[index]+"<br><input type= button value=next onclick=next()><input type= button value=privious onclick=privious()><input type= button value=answer onclick=answer()>";
+        }
+        function answer()
+        {
+            var p=0;
+            if(document.getElementById("a1").checked==true)
+            {
+                p=1;
+            }
+            if(document.getElementById("b2").checked==true)
+            {
+                p=2;
+            }
+            if(document.getElementById("c3").checked==true)
+            {
+                p=3;
+            }
+            if(document.getElementById("d4").checked==true)
+            {
+                p=4;
+            }
+
+            if(p==ans[index])
+            {
+                document.write("right ans");
+            }
+
+            else
+            { 
+                document.write("worng ans");
+            }
+        }
+         
+        </script>
+    </head>
+    <body>
+        <input type="button" id="a" value="1" onclick="show(0)">
+        <input type="button" id="b" value="2" onclick="show(1)"> 
+        <input type="button" id="c" value="3" onclick="show(2)">
+        <input type="button" id="d" value="4" onclick="show(3)">     
+        <input type="button" id="e" value="5" onclick="show(4)">
+        <input type="button" id="f" value="6" onclick="show(5)"> 
+        <input type="button" id="g" value="7" onclick="show(6)">
+        <input type="button" id="h" value="8" onclick="show(7)">
+        <input type="button" id="i" value="9" onclick="show(8)">
+        <input type="button" id="j" value="10"onclick="show(9)">
+        <br>
+        <p id="x"> </p>
+
+    </body>
+</html>
